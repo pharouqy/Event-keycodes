@@ -21,5 +21,10 @@ page[0].addEventListener("keydown", (e) => {
   const cards = document.getElementsByTagName("div");
   for (let i = 4; i < cards.length; i++) {
     cards[i].style.display = "none";
+    cards[i].classList.add("removes");
+  }
+  const removes = document.querySelectorAll(".removes");
+  for (let remove in removes) {
+    removes[remove].parentNode.removeChild(removes[remove]);
   }
 });
